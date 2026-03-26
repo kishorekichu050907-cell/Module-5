@@ -32,5 +32,47 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 
 ## Program
 Add code here
+class Details:
+   
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+class Employee(Details):
+    
+    def __init__(self, name, age, emp_id):
+        super().__init__(name, age)
+        self.emp_id = emp_id
+
+    def show_employee(self):
+        print("Employee:", self.name, self.age, self.emp_id)
+
+class Patient(Details):
+    
+    def __init__(self, name, age, disease):
+        super().__init__(name, age)
+        self.disease = disease
+
+    def show_patient(self):
+        print("Patient:", self.name, self.age, self.disease)
+
+# Input
+ename = input()
+
+eage = int(input())
+
+eid = input()
+
+pname = input()
+
+page = int(input())
+
+disease = input()
+
+# Objects
+e = Employee(ename, eage, eid)
+
+p = Patient(pname, page, disease)
 ## Sample Output
+<img width="375" height="347" alt="image" src="https://github.com/user-attachments/assets/9e065e52-e676-494d-a7b7-71a593de1f0b" />
 
